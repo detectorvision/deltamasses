@@ -1,0 +1,11 @@
+Start deltaMasses via
+Start->Programs->DETECTORVISION->deltaMasses
+
+differential PTM detection tutorial:
+http://www.detectorvision.com/digital_classroom/5_minute_tutorial.htm
+
+manual:
+Start->Programs->DETECTORVISION->manual
+
+how to upgrade to discovery edition:
+http://www.detectorvision.com/digital_classroom/upgrade_to_discovery.htm

@@ -1,0 +1,32 @@
+#############################################
+#deltaMasses Discovery Edition file
+#please never touch this
+#(C) Detecorvision AG CH-Zurich 2006-2008
+#    www.detectorvision.com
+#############################################
+REG_EDITION=	Discovery
+REG_MAC=		02-00-54-55-4E-01
+#############################################
+REG_VERSION_EXPIRE=	9999-12-31
+#must be updated latest at above date
+#############################################
+REG_LICENSE_NUMBER=	456
+REG_LICENSE_KEY=	cx8EUCPJruchQA0SK7UYMitLkZYKHaUteLZtkUVhnHIjoJl+8Nb/L0ZE/JxA8R+q
+#############################################
+#You may want to change the following 5 items 
+#Whitespace between left and right column must remain
+#NO whitespace characters in the items to the right.
+#i.e. "Salt Lake City" should be "Salt_Lake_City"
+#############################################
+REG_USER_FIRST=     put_your_firstname
+REG_USER_LAST=		put_your_lastname
+REG_USER_EMAIL=		put_your_email
+REG_USER_CITY=		put_your_city
+REG_USER_COUNTRY=	put_your_country
+#############################################
+REG_ICPL=		ON
+REG_CARBONCOUNTER=	OFF
+REG_QUADCORE=		OFF
+REG_IBM_DUAL_QUAD=	OFF
+REG_AUTOMATION=		OFF
+#############################################

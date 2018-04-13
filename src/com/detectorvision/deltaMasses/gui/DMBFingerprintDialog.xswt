@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+		<package name="org.eclipse.jface.action" />
+		<package name="gui.diagrams" />
+             
+    </import>   
+	<getShell text="deltaProtein peptideNet pdf exporter" x:style="MIN | ON_TOP" />
+	
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+                <label image="com.detectorvision.XSWTImageLoaderUtility images/deltaProtein_header_image.png" />    
+ 
+    
+     <composite>
+	    <layout x:class="gridLayout" numColumns="2"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/> 
+
+         <!--
+	     <Label text="Select experiment to be used:"/>
+		 <combo  x:id="DMBFingerPrintCombo"/>       
+	     -->   
+	  
+		
+		<Label text="enter your report title: "/>
+		<Text x:id="barcodeTitle" x:style="BORDER" text="enter your report title here">
+				<layoutData x:class="gridData"  widthHint="250" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+		</Text>
+		
+		<Label text="status: "/>               
+		<Label x:id="createStatus" text="----------------------------------------------------------------------------------------------">
+			<layoutData x:class="gridData"  widthHint="250" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+		</Label>
+    </composite>        
+   
+   
+    <composite>
+	    <layout x:class="gridLayout" numColumns="5"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>        
+	    <Label text="low mass:"/> 
+	     <Text x:id="lowMass" x:style="BORDER" text="0.0">
+				<layoutData x:class="gridData"  widthHint="40" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+		</Text>
+		<Label text="high mass:"/> 
+	    <Text x:id="highMass" x:style="BORDER" text="2000.0">
+				<layoutData x:class="gridData"  widthHint="40" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+		</Text>
+		<Button x:id="createButton" text="&amp;create deltaProtein pdf report"><layoutData x:class="gridData"/></Button>   
+    </composite>        
+   
+   
+   <composite>
+	    <layout x:class="gridLayout" numColumns="3"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>        
+	    <label text="total progress ..                            " />
+		<progressBar x:id="totalProgressBar"/>
+		<Button x:id="stopButton" text="&amp;stop"><layoutData x:class="gridData"/></Button>
+    </composite>    
+            
+    <composite>
+	    <layout x:class="gridLayout" numColumns="3"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>        
+	   
+		 <Label x:id="DMBautoStore" text="Automatic storage in deltaMassBase:"/>
+		 <Label text="                                    "/>
+		 <Label x:id="DMBautoStoreOnOF" text="on"/>
+		 
+		 <Label x:id="DMBoverWrite" text="Overwrite existing records in deltaMassBase:"/>
+		 <Label text="                          "/>
+		 <Label x:id="DMBoverWriteOnOF" text="off"/>
+		 		 	
+		 <Label text=" "/>
+		 <Label text="                                    "/>
+		 <Label x:id="DMBExperimentsStored" text=" "/>
+		 		
+	     <Label text="Records stored: "/>
+	     <Label text="                                    "/>
+		 <Label x:id="DMBRecordsStored" text="-"/>
+	
+         <Label text="Spectra stored: "/>
+         <Label text="                                    "/>
+		 <Label x:id="DMBSpectraStored" text="-"/>	
+
+	     <!--<Label text="spectra having a DPD:"/>
+		 <Label x:id="DMBSpecsHavingDpd" text="-"/>-->
+	
+	    <Label  text="PTM pairs stored: "/>
+	    <Label text="                                    "/>
+     	<Label x:id="DMBDpdPairsStored" text="-"/>
+
+	     <Label text="Peptides stored:"/>
+	     <Label text="                                    "/>
+		 <Label x:id="DMBpeptidesStored" text="-"/>
+	
+	     <Label text="PeptideNets stored by deltaProtein:"/>
+	      <Label text="                                    "/>
+		 <Label x:id="DMBPeptideNetsStored" text="-"/>
+
+	     <!--<Label text="distinct peptides stored:"/>
+		 <Label x:id="DMBDistinctPeptidesStored" text="-"/>-->
+		 
+		 <!--<Label text="distinct proteins stored:"/>
+		 <Label x:id="DMBDistinctProteinsStored" text="-"/>-->
+		 
+		 <!--<Label text="distinct peptides being light partner in DPD:"/>
+		 <Label x:id="DMBLightPepsWithDpd" text="-"/>-->
+		 
+		 <!--<Label text="distinct peptides being heavy partner in DPD:"/>
+		 <Label x:id="DMBHeavyPepsWithDpd" text="-"/>-->	 
+		  		  
+		<Label text=""/>
+		 <Label text="                                    "/>
+		<Button x:id="cancelButton" text="&amp;cancel"><layoutData x:class="gridData"/></Button>
+	</composite>
+    
+</xswt>
+

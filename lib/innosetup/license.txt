@@ -1,0 +1,61 @@
+deltaMasses Personal / Discovery Edition License
+
+Copyright (C) 2005-2013 Detectorvision AG Zurich. All rights reserved.
+
+There is no license fee for the license granted under the Personal Edition.
+
+There is a license fee for the license granted under Discovery Edition.
+
+Except where explicitly noted, all of the documentation and software included in this deltaMasses package is copyrighted by Detectorvision AG. An exception are external packages as listed in the deltaMasses user manual.
+
+This software is provided "as-is," without any express or implied warranty. In no event shall Detectorvision AG be held liable for any damages arising from the use of this software.  
+
+The deltaMasses package may not be redistributed. The only source is http://www.detectorvision.com/deltaMasses i.e. every single installation has to be done by download from this adress. Redistribution is only allowed with paper-written consent from Detectorvision AG. 
+
+The licensee must register with correct name, email, institution, ZIP + city, street, telephone, and country. Not doing so does not void this agreement and is a legal offense against Detectorvision.
+
+Detectorvision AG is not allowed to publish above registration data except your city, country and institution which can be published.
+
+A Personal Edition license is valid for the registered person only and is not transferable.
+
+In any kind of publication, including all public or nonpublic presentations, of deltaMasses results, the authors are legally bound to cite /www.detectorvision.com/deltaMasses
+
+It is forbidden to re-engineer deltaMasses by e.g. reverse compilation or other.
+
+By clicking the "accept" button, or by installing, downloading, or using the software, or by opening the package, you are consenting to be bound by and are becoming a party to this agreement with Detectorvision AG. if you do not agree to all of the terms of this agreement, do not use, install or download the software. 
+
+Detectorvision AG will not grant you a license to install, download, or use the software or accept any order for the software unless you agree to all of the terms of this license agreement. copyright laws and international copyright treaties, as well as other intellectual property laws and treaties, protect this software. 
+
+You are not allowed to sublicense deltaMasses.
+
+A Personal Edition license is valid for a single installation on a single computer for personal use only.
+
+A Discovery Edition license is valid for a single installation on a single computer for a single user at a time ("one seat license").
+
+You are receiving a non-transferable, personal, and non-exclusive license to use deltaMasses. Copies of the software or documentation may not be redistributed in any way. Detectorvision AG requests each user to register with name, city, country, and email at  www.detectorvision.com/deltaMasses.html . 
+
+The software and all intellectual property rights relating to the Software, including code, operation, architecture, implementation, look and feel remain at all times the exclusive property of Detectorvision AG. 
+
+You are not receiving any right, title, or interest in the software, except to the extent of this license. You may not modify, translate, reverse engineer, decompile, disassemble, or create derivative works or emulators of the software. Decompiling or disassembling the Software may violate the software’s copyright. 
+
+You may not delete or alter any copyright, trademark, or other proprietary rights notices of Detectorvision AG and any licensors appearing on the software, all of which must be reproduced on all copies made of the Software. 
+
+You may not distribute the Software in any form to any third party including, and you may not sublicense, rent, lease, sell, transfer, or grant any rights for deltaMasses in any form to any third party without the written consent of Detectorvision AG. If you violate these terms, Detectorvision AG has the right to seek injunctive or other equitable relief. 
+
+
+For Personal Edition, Detectorvision AG reserves the right to terminate this agreement at any time. Upon termination, your right to use deltaMasses will immediately cease. You agree that you destroy all copies of deltaMasses after notification. 
+
+
+Please submit feedback to info@detectorvision.com including eventual problems  with installation or usage, and suggestions to improve the software. You agree that Detectorvision AG may use your submissions, whether orally o written, and you grant Detectorvision AG a perpetual, unrestricted, irrevocable, and royalty-free license to incorporate your comments, suggestions into Detectorvision AG products or services. 
+
+You understand and agree that the software  is offered "as is" without any warranty whatsoever, expressed or implied or statutory, including, without limitation, any implied warranty of merchantability or fitness for a particular purpose. Detectorvision AG does not warrant that the software is error free or that errors in the software will be corrected. 
+
+You may not assign this agreement, by operation of law or otherwise, without the prior written consent of Detectorvision AG. 
+
+This Agreement shall be construed under and be governed in all respects by the laws of Switzerland without any reference to the principles of conflict of laws thereof. All disputes out of or in connection with this Agreement shall be settled exclusively by the competent courts of Zurich.
+
+If any provision of this agreement is invalid or unenforceable, the remainder of this agreement will be interpreted so as best to reasonably effect the intent of the parties. 
+
+This agreement constitutes the entire understanding and agreement of the parties hereto with respect to its subject matter and supersedes any prior and contemporaneous agreements, purchase orders or understandings between the parties. Any term or provision of this agreement may be amended, and the observance of any term of this agreement may be waived, only by a writing signed by the party or parties to be bound thereby.
+
+End of deltaMasses license text.

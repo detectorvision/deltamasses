@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/commons-math-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/itext-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/jcommon-1.0.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/jdom.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/jfreechart-1.0.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/kxml2-2.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/log4j-1.2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/postgresql-8.2-504.jdbc2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/swt-3.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/swt.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/xmlpull_1_1_3_4b.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dist/xswt.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

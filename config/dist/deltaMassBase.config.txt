@@ -1,0 +1,41 @@
+#################################################################################
+#
+# (C)2005-2008 Detectorvision AG Zurich
+# www.detectorvision.com
+#
+# This software is protected by international copyright treaties.
+#
+# $Id: deltaMassBase.config.txt 130 2008-03-17 12:26:51Z jari $
+#
+#################################################################################
+# Configures parameters for the deltaMasses<->DELTAMASSBASE connection
+# deltaMassBase is the postgreSQL database storing deltaMasses results
+# www.postgresql.org
+#
+# OBSERVE: there MUST be at least one space character after each equal-sign
+#
+# OBSERVE: NO spaces in values
+#
+DELTAMASSBASE_NAME=		deltaMassBase
+DELTAMASSBASE_USER=		postgres
+DELTAMASSBASE_PASSWORD=		4.3.jjMM
+DELTAMASSBASE_PORT=		5432
+DELTAMASSBASE_HOST=		localhost
+#################################################################################
+# Set the four footer fields of the pdf reports. 
+# may be customized
+#
+# OBSERVE: there MUST be one space character after each equal-sign below.
+#
+FOOTER_FIELD_1=	Detectorvision AG
+FOOTER_FIELD_2=	Zurich
+FOOTER_FIELD_3= Switzerland
+FOOTER_FIELD_4= www.detectorvision.com
+#################################################################################
+#
+#
+#
+#
+#
+#
+#

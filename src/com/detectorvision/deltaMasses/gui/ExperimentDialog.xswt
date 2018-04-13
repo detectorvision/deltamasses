@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+    </import>
+
+    <getShell text="experiments in deltaMassBase" x:style="DIALOG_TRIM | APPLICATION_MODAL"/>
+    
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+    <label image="com.detectorvision.XSWTImageLoaderUtility images/pmc_image_600_wide.png" />
+    
+	<table x:style="BORDER | MULTI | FULL_SELECTION" headerVisible="true" x:id="ExperimentTable">
+		<layoutData x:class="gridData" widthHint="580" heightHint="300"/>
+		<x:children>
+			<tableColumn width="100"  text="experiment_id"/>	
+			<tableColumn width="480"  text="experiment name"/>
+		</x:children>
+	</table>
+	
+	<composite>
+	    <layout x:class="gridLayout" numColumns="2"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>
+	    <Button x:id="storeExperimentButton" text="&amp;store selected experiment(s)"><layoutData x:class="gridData" widthHint="200"/></Button>     
+		<Button x:id="cancelButton" text="&amp;Cancel"><layoutData x:class="gridData" widthHint="90"/></Button>
+	</composite>
+</xswt>

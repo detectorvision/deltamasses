@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Copyright (C) 2006-2007 Detectorvision AG; This document describes the deltaMasses preferences.-->
+<!-- $Id: preferences.xml 130 2008-03-17 12:26:51Z jari $ -->
+<deltaMasses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="preferences.xsd">
+	<setting>
+		<name>file.unimod</name>
+		<value>config/unimod.xml</value>
+	</setting>
+	<setting>
+		<name>class.algorithm</name>
+		<value>com.detectorvision.massspectrometry.analyzation.BaseAlgorithm</value>
+	</setting>
+</deltaMasses>

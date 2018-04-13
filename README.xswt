@@ -1,0 +1,36 @@
+$Id: README.xswt 256 2009-01-05 10:22:16Z jari $
+
+
+Image loading in XSWT requires images to be located relative to some class
+supplied as argument to XSWT:
+
+<label image="com.detectorvision.XSWTImageLoaderUtility
+			 images/splash_image.png" />
+
+XSWTImageLoaderUtility class is an empty shell only to be used to set
+the root level for XSWT. All images are loaded relative to this
+root. In the above example the root level becomes com/detectorvision
+and the image is located in com/detectorvision/images
+
+[ The XSWT team could add another image loader that uses
+  getSystemResource calls instead of getResource calls, then there
+  would be no need to use the XSWTImageLoaderUtility class to set the
+  directory. The images could be loaded with an absolute path like
+  <label imageSysResource="com/detectorvision/images/splash_image.png" />
+  This would be more intuitive but is not our issue to resolve. ]
+
+
+Images can be located in several places, one could imagine that
+com/detectorvision/images contains images common to all applications,
+and images specific to an application is placed in a sub directory
+like com/detectorvision/deltaMasses/images
+
+<label image="com.detectorvision.XSWTImageLoaderUtility
+			 images/splash_image.png" />
+<label image="com.detectorvision.XSWTImageLoaderUtility
+			 deltaMasses/images/some_image.png" />
+
+
+The build script compiles all images to images.jar, and the
+XSWTImageLoaderUtillity.class is located in
+utility.jar.

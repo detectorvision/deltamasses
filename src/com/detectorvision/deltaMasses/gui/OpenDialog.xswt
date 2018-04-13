@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+    </import>
+    
+    <getShell text="Open" />
+    
+	<layout x:class="gridLayout" numColumns="1"/>
+	<layoutData  x:class="gridData" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL" />
+            
+	<composite >
+		<layout x:class="gridLayout" numColumns="4"/>
+		
+		<layoutData  x:class="gridData"  grabExcessHorizontalSpace="true" 
+			horizontalAlignment="GridData.FILL" />        
+		<label text="Peakfile:" font="BOLD" ><layoutData x:class="gridData" />
+			<layoutData x:class="gridData"  widthHint="50" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL"/>
+		</label>
+
+		<Text x:id="peakfilenameText" x:style="BORDER">
+			<layoutData x:class="gridData" widthHint="220" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+		</Text>
+		<Button x:id="selectPeakfileButton" image="com.detectorvision.XSWTImageLoaderUtility images/16-tag-add.png" >
+			<layoutData x:class="gridData"  grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+		</Button>
+	</composite>
+
+	<composite >
+	    <layout x:class="gridLayout"  numColumns="2"/>
+		 <layoutData x:class="gridData" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL" widthHint="150" />
+		<composite >
+		    <layout x:class="gridLayout"  numColumns="2"/>
+	    	<layoutData x:class="gridData" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.END"  />        
+			<Button x:id="okButton" text="&amp;OK"><layoutData x:class="gridData" widthHint="80"/></Button>
+			<Button x:id="closeButton" text="&amp;Cancel"><layoutData x:class="gridData" widthHint="80"/></Button>
+		</composite>
+	</composite>
+</xswt>
+
+

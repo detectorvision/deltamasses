@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+    </import>
+
+    <getShell text="records in deltaMassBase" x:style="DIALOG_TRIM | APPLICATION_MODAL"/>
+    
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+    <label image="com.detectorvision.XSWTImageLoaderUtility images/pmc_image_800_wide.png" />
+    
+	<table x:style="BORDER | MULTI | FULL_SELECTION" headerVisible="true" x:id="RecordTable">
+		<layoutData x:class="gridData" widthHint="780" heightHint="300"/>
+		<x:children>
+			<tableColumn width="60"  text="record_id"/>
+			<tableColumn width="60"  text="spectra"/>			
+			<tableColumn width="60"  text="pairs"/>
+			<tableColumn width="90"  text="deltaDate"/>	
+			<tableColumn width="300" text="filename"/>	
+			<tableColumn width="100"  text="experiment_id"/>	
+			<tableColumn width="130"  text="experiment name"/>
+		</x:children>
+	</table>
+	
+	<composite>
+	    <layout x:class="gridLayout" numColumns="4"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>
+	    <Button x:id="saveRecordButton" text="&amp;save"><layoutData x:class="gridData" widthHint="80"/></Button>   
+	    <Button x:id="deleteRecordButton" text="&amp;delete selected record(s)"><layoutData x:class="gridData" widthHint="140"/></Button>       
+	    <Button x:id="loadRecordButton" text="&amp;load selected record"><layoutData x:class="gridData" widthHint="140"/></Button>       
+		<Button x:id="cancelButton" text="&amp;Cancel"><layoutData x:class="gridData" widthHint="80"/></Button>
+	</composite>
+</xswt>

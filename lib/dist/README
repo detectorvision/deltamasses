@@ -1,0 +1,14 @@
+$Id: README 168 2008-07-08 12:23:27Z jari $
+
+Placeholder for library (jar) files for distribution
+----------------------------------------------------
+
+The distribution files are targeted for the Microsoft Windows
+operating system. Deltamasses is currently only distributed for use in
+Microsoft Windows environments.
+
+Place library files for distribution in this directory. The 'dist'
+build target will check for library files here.
+
+Do NOT check-in you local library files! Personalized library files
+should be placed in '../local'.

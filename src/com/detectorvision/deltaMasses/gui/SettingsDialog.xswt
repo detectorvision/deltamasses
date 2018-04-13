@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+		<package name="org.eclipse.jface.action" />
+		<package name="gui.diagrams" />
+             
+    </import>   
+	<getShell text="parameters" x:style="MIN | ON_TOP" />
+	
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+            
+    <label image="com.detectorvision.XSWTImageLoaderUtility images/pmc_image.png" />       
+    
+         
+    <composite>
+	    <layout x:class="gridLayout" numColumns="2"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>        
+	
+	      <Label x:id="versionInfo" text="This functionality is only available in Discovery Edition."/>  
+	      <Label text=""/>  
+	
+	
+	
+		 <Label x:id="DMBautoStore" text="automatic storage in deltaMassBase:"/>
+         <Button x:id="storageButton" text="off"><layoutData x:class="gridData"/></Button>
+         	
+	     <Label x:id="neutralLoss" text="tolerate weak delta:"/>
+	     <Button x:id="neutralLossButton" text="off"><layoutData x:class="gridData"/></Button>
+	     
+	     <Label x:id="identifiedPairsOnly" text="identified pairs only:"/>
+	     <Button x:id="identifiedPairsOnlyButton" text="off"><layoutData x:class="gridData"/></Button>
+	     
+	     <Label x:id="noLowMassBoundary" text="no low mass boundary:"/>
+	     <Button x:id="noLowMassBoundaryButton" text="off"><layoutData x:class="gridData"/></Button>
+	    
+         <Label x:id="polymerFilter" text="polymer filtering:"/>
+		 <Button x:id="polymerFilterButton" text="off"><layoutData x:class="gridData"/></Button>
+	
+		 <Label x:id="fastDetect" text="fast single channel deltaMass detection:"/>
+		 <Button x:id="fastDetectButton" text="off"><layoutData x:class="gridData"/></Button>
+
+   	     <Label x:id="fastDetectLazy" text="fast single channel high sensitivity:"/>
+		 <Button x:id="fastDetectLazyButton" text="off"><layoutData x:class="gridData"/></Button>
+
+    
+		  
+		<composite x:id="optionsComposite" >
+			<layout x:class="gridLayout"   numColumns="3"/>
+			<layoutData x:class="gridData" heightHint="90" grabExcessHorizontalSpace="true" horizontalSpan="2" horizontalAlignment="GridData.FILL"/>
+
+			
+			 <Label x:id="fastDelta" text="fast single channel deltaMass:"/>
+		   <Text x:id="fastDeltaMassText" x:style="BORDER" text="79.966331">
+			  	<layoutData x:class="gridData"  widthHint="50" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+	      </Text>
+	      <Label text="Dalton" />
+	          
+			
+			
+			
+				          		   <Label x:id="msAcc" text="MS accuracy:">
+				          		   <layoutData x:class="gridData"  grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL"/>
+				          		   </Label>
+		   <Text x:id="msAccText" x:style="BORDER" text="0.01">
+			  	<layoutData x:class="gridData"  widthHint="50" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+	      </Text>
+		<Label text="Dalton" />
+		
+		
+	    <Label x:id="msmsAcc" text="MSMS accuracy:"/>
+		   <Text x:id="msmsAccText" x:style="BORDER" text="0.01">
+			  	<layoutData x:class="gridData"  widthHint="50" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+	      </Text>
+		<Label text="Dalton" />
+			
+
+				
+			
+
+				
+		</composite>
+	</composite>
+          
+      <composite>
+	    <layout x:class="gridLayout" numColumns="3"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>        
+	  
+		<Button x:id="setButton" text="&amp;check, set and use"><layoutData x:class="gridData"/></Button>
+		<Button x:id="defaultButton" text="&amp;get default settings"><layoutData x:class="gridData"/></Button>
+		<Button x:id="cancelButton" text="&amp;cancel"><layoutData x:class="gridData"/></Button>		
+	</composite>
+	
+	<composite>
+	    <layout x:class="gridLayout" numColumns="1"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" x:style="BORDER" 
+	            horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>        
+	      <Label x:id="status" text="------------------------------------------------------------------------------"/>  
+	</composite>
+	      
+	
+	
+    
+</xswt>
+

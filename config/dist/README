@@ -1,0 +1,10 @@
+$Id: README 130 2008-03-17 12:26:51Z jari $
+
+Placeholder for configuration files for distribution
+----------------------------------------------------
+
+Place configuration files for distribution in this directory. The
+'dist' build target will check for configuration files here.
+
+Do NOT check-in you local configuration files! Personalized
+configuration files should be placed in '../local'.

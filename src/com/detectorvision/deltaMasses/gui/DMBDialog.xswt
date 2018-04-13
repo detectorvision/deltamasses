@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+		<package name="org.eclipse.jface.action" />
+		<package name="gui.diagrams" />
+             
+    </import>   
+	<getShell text="deltaMassBase" x:style="MIN | ON_TOP" />
+	
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+                <label image="com.detectorvision.XSWTImageLoaderUtility images/pmc_image_800_wide.png" />    
+                
+                
+    <composite>
+	    <layout x:class="gridLayout" numColumns="5"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>        
+	    <Label text="deltaMassBase operation:"/>        
+	    <!--<Text x:id="createText" x:style="BORDER" text="">
+				<layoutData x:class="gridData"  widthHint="0" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+		</Text>-->
+		<Label text=""/>
+		<Label text=""/>
+		<!--<Button x:id="createButton" text="&amp;create (data loss)"><layoutData x:class="gridData"/></Button> -->
+	    <Button x:id="dropButton"   text="&amp;format (data loss)"><layoutData x:class="gridData"/></Button>   
+		<Button x:id="vacuumButton" text="&amp;vacuum (no data lost)"><layoutData x:class="gridData"/></Button>   
+		
+		
+		<Label x:id="createStatus" text="----------------------------------------------------"/>
+	     <Label text=""/>
+	     <Label text=""/>
+	     <Label text=""/>
+	     <Label text=""/>
+		 
+		 <Label text=""/>
+	     <Label text=""/>
+	     <Label text=""/>
+	     <Label text=""/>
+	     <Label text=""/>
+		 
+    </composite>        
+                
+                    
+    <composite>
+	    <layout x:class="gridLayout" numColumns="2"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>        
+	
+
+		 <Label text="database name:"/>
+		 <Label x:id="DMB_DELTAMASSBASE_NAME" text=""/>
+	
+		 <Label text="database configuration file:"/>
+		 <Label x:id="DMB_filename" text=""/>
+		 
+		 <Label text=""/>
+	     <Label text=""/>
+	
+		 <Label text="Database created:"/>
+		 <Label x:id="DMBcreated" text=""/>
+		 
+		 <Label text="Last modification:"/>
+		 <Label x:id="DMBlastModification" text=""/>
+		 
+		 <Label text="Last deltaProtein calculation:"/>
+		 <Label x:id="DMBlastSpecnet" text=""/>
+		 
+		 <Label text=""/>
+		 <Button x:id="calcNetButton" text="&amp;calculate peptide nets"><layoutData x:class="gridData"/></Button>   
+
+		 <Label text=""/>
+	     <Label text=""/>
+
+		 <Label text="Database version:"/>
+		 <Label x:id="DMBversion" text=""/>
+		 
+		 <Label text="Database version needed:"/>
+		 <Label x:id="DMBversionNeeded" text=""/>
+
+		 
+		 <Label text="status:"/>
+		 <Label x:id="DMB_connectionError" text=""/>
+		 
+		 <Label text="URL:"/>
+		 <Label x:id="DMB_URL" text=""/>
+		 
+	     <Label text=""/>
+	     <Label text=""/>
+
+
+	
+		 <Label x:id="DMBautoStore" text="Automatic storage in deltaMassBase:"/>
+		 <Label x:id="DMBautoStoreOnOF" text="on"/>
+		 
+		 <Label x:id="DMBoverWrite" text="Overwrite existing records in deltaMassBase:"/>
+		 <Label x:id="DMBoverWriteOnOF" text="off"/>
+		 	
+		 <Label text=""/>
+		 <Label x:id="DMBExperimentsStored" text=""/>
+		 	
+	     <Label text="Records stored: "/>
+		 <Label x:id="DMBRecordsStored" text=""/>
+	
+         <Label text="Spectra stored: "/>
+		 <Label x:id="DMBSpectraStored" text=""/>	
+
+	     <!--<Label text="spectra having a DPD:"/>
+		 <Label x:id="DMBSpecsHavingDpd" text="-"/>-->
+	
+	    <Label  text="PTM pairs stored: "/>
+     	<Label x:id="DMBDpdPairsStored" text=""/>
+	
+	     <Label text="Peptides identified:"/>
+		 <Label x:id="DMBpeptidesStored" text=""/>
+	
+	     <Label text="PeptideNets stored by deltaProtein:"/>
+		 <Label x:id="DMBPeptideNetsStored" text=""/>
+		 
+		 <!--<Label text="distinct proteins stored:"/>
+		 <Label x:id="DMBDistinctProteinsStored" text="-"/>-->
+		 
+		 <!--<Label text="distinct peptides being light partner in DPD:"/>
+		 <Label x:id="DMBLightPepsWithDpd" text="-"/>-->
+		 
+		 <!--<Label text="distinct peptides being heavy partner in DPD:"/>
+		 <Label x:id="DMBHeavyPepsWithDpd" text="-"/>-->	 		
+	    </composite>		 
+		
+        <table x:style="BORDER | SINGLE | FULL_SELECTION" headerVisible="true" x:id="DBTable">
+		<layoutData x:class="gridData" widthHint="800" heightHint="150"/>
+		<x:children>
+		    <tableColumn width="50"  text="active"/>
+			<tableColumn width="160"  text="config file name"/>
+			<tableColumn width="120"  text="database name"/>			
+			<tableColumn width="100"  text="host"/>
+			<tableColumn width="40"  text="port"/>
+		    <tableColumn width="40"  text="user"/>
+	        <tableColumn width="235"  text="connect"/>
+			<tableColumn width="55" text="version"/>	
+		</x:children>
+	    </table>
+	    <composite>
+	      <layout x:class="gridLayout" numColumns="6"/>
+	      <layoutData x:class="gridData" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.END"/> 
+	      <Button x:id="create" text="create"><layoutData x:class="gridData"/></Button>      
+	      <Button x:id="editConfig" text="edit config file"><layoutData x:class="gridData"/></Button>      
+		  <Button x:id="infoToPdf" text="info to pdf"><layoutData x:class="gridData"/></Button>
+	      <Button x:id="showDetails" text="show details"><layoutData x:class="gridData"/></Button>
+	      <Button x:id="setDB" text="set database"><layoutData x:class="gridData"/></Button>
+	      <Button x:id="cancelButton" text="&amp;ok"><layoutData x:class="gridData"/></Button>	
+        </composite>
+</xswt>

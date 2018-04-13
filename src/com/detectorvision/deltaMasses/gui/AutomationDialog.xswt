@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+		<package name="org.eclipse.jface.action" />
+		<package name="gui.diagrams" />	
+    </import>  
+	<getShell text="automation" x:style="MIN | ON_TOP" />
+	
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+     <label image="com.detectorvision.XSWTImageLoaderUtility images/automation.png" />
+    
+	 
+	 <composite>
+
+		<layout x:class="gridLayout" numColumns="5" marginHeight="0"/>
+ 
+		<layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+		       grabExcessVerticalSpace="false" horizontalAlignment="GridData.FILL" 
+			   verticalAlignment="GridData.FILL" />
+			   
+    			<label x:id="mascotHttpLabel" text="http to your mascot server"><layoutData x:class="gridData"/></label>
+				<Text x:id="httpText" x:style="BORDER" >
+				<layoutData x:class="gridData"  widthHint="150" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+				</Text>
+				<label x:id="comLabel" text=""><layoutData x:class="gridData" widthHint="250"/></label>
+	 			<Button x:id="testButton" text="&amp;test"><layoutData x:class="gridData"/></Button>
+     			<Button x:id="saveButton" text="&amp;save"><layoutData x:class="gridData"/></Button>		
+	
+                <label text="" />
+		        <label text="" />
+		        <label text="" />
+		        <label text="" />
+		        <label text="" />		
+		      
+		        <label text=".dat files in searches.log.txt to get:" />
+		        <label x:id="numMascotDatFiles" text="---------------" />
+		        <label text="" />
+		<Button x:id="showButton" text="&amp;show"><layoutData x:class="gridData"/></Button> 
+		<Button x:id="getButton" text="&amp;get"><layoutData x:class="gridData"/></Button> 
+				              
+
+	    <label text=".mascot.xml import progress:" />
+		<progressBar x:id="importProgressBar" />
+		<label text="----------------------------------" x:id="importLabelState" x:style="BORDER" >
+			<layoutData x:class="gridData" grabExcessHorizontalSpace="true"
+				horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL" />
+		</label>
+        <label text="" />
+		<label text="" />		
+	    
+	    <label text="" />
+		<label text="" />
+		<label text="" />
+		<label text="" />
+	    <label text="" />
+			   		    
+	    <label text="" />
+		<label text="" />
+		<label text="" />
+		<label text="" />
+	    <label text="" />
+		
+		<label text=".mascot.xml files to process:" />
+		<label x:id="mascotXmlToProcess" text="-------------" />
+		<label text="" />	
+        <Button x:id="showMascotButton" text="&amp;show"><layoutData x:class="gridData"/></Button> 
+		<label text="" />		
+		
+		<label text=".mgf files to process:" />
+		<label x:id="mgfToProcess" text="-------------" />
+		<label text="" />	
+        <Button x:id="showMgfButton" text="&amp;show"><layoutData x:class="gridData"/></Button> 
+		<label text="" />		
+		
+			    
+	    <label text="" />
+		<label text="" />
+		<label text="" />
+		<label text="" />
+	    <label text="" />
+			   		    
+	    <label text="" />
+		<label text="" />
+		<label text="" />
+		<label text="" />
+	    <label text="" />
+		
+	    <label text="record progress:" />
+		<progressBar x:id="recordProgressBar" />
+		<label text="click start to process" x:id="recordLabelState" x:style="BORDER" >
+			<layoutData x:class="gridData" grabExcessHorizontalSpace="true"
+				horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL" />
+		</label>
+		<label text="" />
+		<label text="" />
+	    
+	    <label text="total progress:" />
+		<progressBar x:id="totalProgressBar" />
+		<label text="" x:id="totalLabelState" x:style="BORDER" >
+			<layoutData x:class="gridData" grabExcessHorizontalSpace="true"
+				horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL" />
+		</label>
+		<Button x:id="startButton" text="&amp;start"><layoutData x:class="gridData"/></Button>
+		<Button x:id="stopButton" text="&amp;stop"><layoutData x:class="gridData"/></Button>
+		
+		 <label text="" />
+		 <label text="" />
+		 <label text="" />
+		 <label text="" />
+		<Button x:id="cancelButton" text="&amp;cancel"><layoutData x:class="gridData"/></Button>
+	</composite>
+</xswt>
+

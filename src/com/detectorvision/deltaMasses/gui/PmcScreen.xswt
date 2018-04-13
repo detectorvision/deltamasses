@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+		<package name="org.eclipse.jface.action" />
+		<package name="com.detectorvision.deltaMasses.gui.diagrams" />
+    </import>  
+	<getShell text="Post Measurement Calibration" x:style="MIN | ON_TOP" />
+	
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+     <label image="com.detectorvision.XSWTImageLoaderUtility images/pmc_image.png" />
+
+     <PmcCanvas x:style="BORDER|SINGLE" x:id="pmcCanvas" >
+						<layoutData x:class="gridData" grabExcessHorizontalSpace="true" heightHint="580" widthHint="450"
+		        	    	grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+			        	    verticalAlignment="GridData.FILL" />
+	 </PmcCanvas>
+
+    <composite>
+	    <layout x:class="gridLayout" numColumns="4"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/> 
+	    <Button x:id="pngButton" text="&amp;calibration graphics to clipboard"><layoutData x:class="gridData" widthHint="220"/></Button>       
+	    <!--<Button x:id="pdfButton" text="&amp;to .pdf"><layoutData x:class="gridData" widthHint="100"/></Button>-->        
+	    <Button x:id="clipButton" text="&amp;data to clipboard"><layoutData x:class="gridData" widthHint="100"/></Button>        
+		<Button x:id="cancelButton" text="&amp;Cancel"><layoutData x:class="gridData" widthHint="100"/></Button>
+	</composite>
+    
+    <Button x:id="pmcButton" text="&amp;Export Calibrated .mgf"><layoutData x:class="gridData" widthHint="450"/></Button>
+</xswt>
+

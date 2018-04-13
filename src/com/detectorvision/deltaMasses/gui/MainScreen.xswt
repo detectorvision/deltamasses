@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+	<import xmlns="http://sweet_swt.sf.net/xswt"> 
+		<package name="java.lang"/> 
+		<package name="org.eclipse.swt.widgets"/>
+		<package name="org.eclipse.swt.layout"/>
+		<package name="org.eclipse.jface.action" />
+		<package name="com.detectorvision.deltaMasses.gui.diagrams" />
+	</import>
+	 
+	<getShell x:id="shellText" image="com.detectorvision.XSWTImageLoaderUtility images/detectorvision.png" text="deltaMasses        personal edition 2.2" />
+	
+	<!--
+		Add the menu bar to the parent's Shell. 
+	-->
+	<layout x:class="gridLayout"/>
+	<getShell menuBar="menuBar">
+		<menu x:style="DROP_DOWN" x:id="deltaMassesMenu">
+			<menuItem x:id="openMenuItem" text="open"/>
+			<!--<menuItem text="Export" x:style="CASCADE" menu="exportMenu"/>-->
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="xmlMenuItem" text="export .deltaMasses.xml"/>
+			<menuItem x:id="pdfMenuItem" text="export .pdf"/>
+			<menuItem x:id="tsvMenuItem" text="export .tsv"/>
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="dbMenuItem" text="deltaMassBase"/>
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="exitMenuItem" text="exit"/>
+		</menu>
+	    <menu x:style="DROP_DOWN" x:id="analyzeMenu">
+			<menuItem x:id="runMenuItem" text="analyze" image="com.detectorvision.XSWTImageLoaderUtility images/16-arrow-next.png" />
+			<menuItem x:id="stopMenuItem" text="Stop" image="com.detectorvision.XSWTImageLoaderUtility images/16-control-stop.png"/>
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="settingsMenuItem" text="parameters"/>
+		</menu>
+		
+		<!--<menu x:style="DROP_DOWN" x:id="viewMenu">
+			<menuItem text="Zoom In"/>		
+			<menuItem text="Zoom Out"/>
+			<menuItem text="Reset zoom"/>
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem text="Show Grid"/>
+			<menuItem text="Show Scale"/>
+		</menu>-->  
+			
+		<menu x:style="DROP_DOWN" x:id="autoMenu">
+			<menuItem x:id="autoAutomationMenuItem" text="start automatic analysis"/>
+			<menuItem x:id="autoViewDirMgfMenuItem" text="view .mgf automation directory"/>	
+			<menuItem x:id="autoViewDirMascotMenuItem" text="view .mascot.xml automation directory"/>		
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="autoSetRaw2mgfMenuItem" text="set .raw2mgf on"/>
+			<menuItem x:id="autoConfRaw2mgfMenuItem" text="configure raw2mgf"/>
+			<menuItem x:style="SEPARATOR"/>
+		    <menuItem x:id="autoLogMenuItem" text="view automation log"/>
+		    <menuItem x:id="autoCleanLogMenuItem" text="clean automation log"/>
+		</menu>
+		
+		<menu x:style="DROP_DOWN" x:id="extrasMenu">
+		    <menuItem x:id="pmcMenuItem" text="Post Measurement Calibration"/>
+		     <menuItem x:id="accuracyItem" text="estimate MS accuracy"/>
+			<menuItem x:style="SEPARATOR"/> 
+			<menuItem x:id="unimodMenuItem" text="UniMod modifications" />
+			<menuItem x:style="SEPARATOR"/>
+		    <menuItem x:id="experimentTableMenuItem" text="show experiments in deltaMassBase" />
+			<menuItem x:style="SEPARATOR"/>
+		    <menuItem x:id="recordTableMenuItem" text="show records in deltaMassBase" />
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="proteinViewMenuItem" text="switch to protein view" />
+			<menuItem x:style="SEPARATOR"/> 
+			<menuItem x:id="DMBFMenuItem" text="deltaProtein" />
+	
+			<menuItem x:style="SEPARATOR"/> 
+			<menuItem x:id="icplMenuItem" text="ICPL-QUANT" />
+			<menuItem x:style="SEPARATOR"/> 
+			<menuItem x:id="carbonCounterMenuItem" text="CarbonCounter" />
+	
+			<menuItem x:style="SEPARATOR"/> 
+			<menuItem x:id="openLogMenuItem" text="show log" />
+			<menuItem x:id="deleteLogMenuItem" text="clean log" />
+			
+			<!--<menuItem x:style="SEPARATOR"/>-->
+			<!--<menuItem text="Preferences"/>-->
+		</menu>
+		<menu x:style="DROP_DOWN" x:id="aboutMenu">
+			<menuItem x:id="helpMenuItem" text="deltaMasses manual"/>
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="deltaMassBaseInstall" text="How to install the database - a short manual"/>
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="licenseMenuItem" text="upgrade to Discovery Edition"/>
+			<menuItem x:id="updateMenuItem" text="check for updates"/>
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="telephoneMenuItem" text="Discovery Edition only: +41 78 631 3871"/>
+			<menuItem x:id="skypeMenuItem"     text="skype support: detectorvision"/>
+			<menuItem x:style="SEPARATOR"/>
+			<menuItem x:id="aboutMenuItem" text="about"/>
+		</menu>
+		<!--<menu x:style="DROP_DOWN" x:id="exportMenu">
+			<menuItem text="PDF Export"/>
+			<menuItem text="CSV Export"/>
+		</menu>-->
+		
+		<menu x:style="BAR" x:id="menuBar">
+			<menuItem text="&amp;file" x:style="CASCADE" menu="deltaMassesMenu"/>
+			<menuItem text="&amp;analyze" x:style="CASCADE" menu="analyzeMenu"/>
+			<menuItem text="&amp;automation" x:style="CASCADE" menu="autoMenu"/>
+			<!--<menuItem text="&amp;view" x:style="CASCADE" menu="viewMenu"/>-->
+			<menuItem text="&amp;extras" x:style="CASCADE" menu="extrasMenu"/>
+			<menuItem text="&amp;help + about" x:style="CASCADE" menu="aboutMenu"/>
+		</menu>
+	</getShell>
+	
+	
+	
+	
+	
+	<!--
+		Add the tool bar to the parent's Shell. 
+	-->
+	<composite>
+    <layout x:class="gridLayout" numColumns="5"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="false" verticalAlignment="GridData.FILL" 
+            horizontalAlignment="GridData.FILL"/>
+      <toolBar x:class="toolBar">
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="false" />
+        <toolItem x:id="openButton" x:text="open" width="20" image="com.detectorvision.XSWTImageLoaderUtility images/24-tab-open.png"/>
+        <toolItem x:id="parameterButton" x:text="parameters" width="20" image="com.detectorvision.XSWTImageLoaderUtility images/24-settings.png"/>
+        <toolItem x:style="SEPARATOR" /> 
+        <toolItem x:id="runButton" x:text="analyze" image="com.detectorvision.XSWTImageLoaderUtility images/24-arrow-next.png" />
+        <toolItem x:id="stopButton" x:text="stop" image="com.detectorvision.XSWTImageLoaderUtility images/24-off.png" /> 
+        <toolItem x:id="storeButton" x:text="store" image="com.detectorvision.XSWTImageLoaderUtility images/24-on.png" /> 
+  
+      </toolBar>
+      <label x:id="YourLogoLabel" image="com.detectorvision.XSWTImageLoaderUtility images/YourLogo.png" />   
+       <toolBar x:class="toolBar">
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="false" />
+	    <toolItem x:id="DMBButton" text="deltaMassBase" image="com.detectorvision.XSWTImageLoaderUtility images/24-control-stop.png" />
+	    <toolItem x:id="deltaClusterButton" text="deltaCluster" image="com.detectorvision.XSWTImageLoaderUtility images/24-settings.png" /> 
+        <toolItem x:id="fingerprintButton" text="deltaProtein" image="com.detectorvision.XSWTImageLoaderUtility images/24-control-stop.png" /> 
+        <toolItem x:id="pdfButton" x:text="pdf reporter" image="com.detectorvision.XSWTImageLoaderUtility images/24-control-stop.png" /> 
+        <toolItem x:style="SEPARATOR"/>
+    </toolBar>
+    <label x:id="barLabel1" text="-------------------------------------------------------------------------------------------------"><layoutData x:class="gridData" grabExcessHorizontalSpace="true" /></label> 
+    <label image="com.detectorvision.XSWTImageLoaderUtility images/detectorvision_transparent.png" /> 
+   </composite>
+  <!--   
+		Add the lists to the parent's Shell. 
+	-->
+	<composite >
+	<layoutData x:class="gridData"/>
+		<layout x:class="gridLayout" numColumns="5" marginWidth="0"/>
+			<layoutData x:class="gridData" grabExcessHorizontalSpace="false"
+				grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+				verticalAlignment="GridData.FILL"/>
+	            
+
+					<table x:style="BORDER | FULL_SELECTION" headerVisible="true" x:id="modificationsTable">
+						<layoutData x:class="gridData" grabExcessVerticalSpace="true" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+						<x:children>
+							<tableColumn width="100" text="modification"/>
+							<tableColumn width="60"  text="deltaMass"/>
+							<tableColumn width="80" text="composition"/>
+							<tableColumn width="80" text="full name"/>
+							<tableColumn width="70"  text="unimod id"/>							
+							<tableColumn width="70"  text="pairs found"/>		
+							<!--<tableItem/>-->
+						</x:children>
+					</table>
+
+					<sash x:style="VERTICAL"><layoutData x:class="gridData" grabExcessVerticalSpace="true" 
+					            horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL" />
+					</sash>
+
+					<table x:style="BORDER | FULL_SELECTION" headerVisible="true" x:id="spectrumPairsTable">
+						<layoutData x:class="gridData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+						<x:children>
+							<tableColumn width="150" text="light peptide"/>
+							<tableColumn width="66" text="light mass"/>
+							<tableColumn width="50" text="heavy peptide"/>
+					        <tableColumn width="60" text="deltaMass"/>
+					        <tableColumn width="60" text="p"/>
+							<tableColumn width="60" text="similarity"/>
+							<tableColumn width="100" text="light protein"/>
+							<tableColumn width="100" text="heavy protein"/>
+							<tableColumn width="60" text="weak delta"/>
+							
+						</x:children>
+					</table>
+	</composite>
+    
+    <!--
+		Add the tabfolder to the parent's Shell. 
+	-->
+
+	<sash x:style="HORIZONTAL"><layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL" />
+	</sash>
+
+	<tabFolder><!--Frank-->
+			<layoutData x:class="gridData" grabExcessHorizontalSpace="false"
+	            grabExcessVerticalSpace="true" minimumHeight="350" horizontalAlignment="GridData.FILL" 
+	            verticalAlignment="GridData.FILL" />
+			<tabItem text="&amp;Differential PTM Detection" control="spectrumTab" />
+			<tabItem text="&amp;Mass Distance Fingerprint" control="deltaMassesTab" />
+			
+			<composite x:id="spectrumTab">
+				<layout x:class="gridLayout" numColumns="2" />
+					<spectrumCanvas x:style="BORDER|SINGLE" x:id="spectrumCanvas">
+						<layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+		        	    	grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+			        	    verticalAlignment="GridData.FILL" />
+					</spectrumCanvas>
+					<scale x:style="VERTICAL" x:id="spectrumZoomScale">
+						<layoutData x:class="gridData" grabExcessHorizontalSpace="false" 
+		            		grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+			            	verticalAlignment="GridData.FILL" />
+					</scale>
+					
+			</composite>
+				
+
+			<composite x:id="deltaMassesTab">
+				<layout x:class="gridLayout" numColumns="4" />
+
+					<deltaMassesCanvas x:style="BORDER|SINGLE" x:id="deltaMassesCanvas">
+						<layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	        	    		grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+		        	    	verticalAlignment="GridData.FILL" />
+					</deltaMassesCanvas>
+					<scale x:style="VERTICAL" x:id="deltaMassesZoomScale">
+						<layoutData x:class="gridData" grabExcessHorizontalSpace="false" 
+		            		grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+			            	verticalAlignment="GridData.FILL" />
+					</scale>
+					
+					<retentionCanvas x:style="BORDER|SINGLE" x:id="retentionCanvas">
+						<layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+		            		grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+			            	verticalAlignment="GridData.FILL" />
+					</retentionCanvas>
+					<scale x:style="VERTICAL" x:id="retentionZoomScale">
+						<layoutData x:class="gridData" grabExcessHorizontalSpace="false" 
+		            		grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+			            	verticalAlignment="GridData.FILL" />
+					</scale>
+			</composite>
+			
+	</tabFolder>
+	
+<composite>
+		<layout x:class="gridLayout" numColumns="8" marginHeight="0"/>
+
+		<layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+		       grabExcessVerticalSpace="false" horizontalAlignment="GridData.FILL" 
+			   verticalAlignment="GridData.FILL" />
+		<label x:id="pair_id_Label"  text="pair_id:.........."/>	   
+	    <label x:id="specNet_id_Label"  text="specNet_id:........."/>
+	    <Button x:id="peptideNetButton" text="show peptideNet" />
+	    <label text="    marked:"/>
+	    <label x:id="pair_is_marked_Label"  text="......."/>	
+	    <Button x:id="pairUnMarkedButton" text="delete comment" />
+		<Button x:id="pairMarkedButton" text="mark and store comment" />
+		<Text x:id="pairCommentText" x:style="BORDER" text="">
+				<layoutData x:class="gridData"  widthHint="400" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+	    </Text>
+</composite>	
+	
+	
+		
+<composite>
+		<layout x:class="gridLayout" numColumns="14" marginHeight="0"/>
+
+		<layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+		       grabExcessVerticalSpace="false" horizontalAlignment="GridData.FILL" 
+			   verticalAlignment="GridData.FILL" />
+	    <Button x:id="graphicsToPdfButton" text="pdf" />
+		<Button x:id="graphicsToClipBoardButton" text="clipboard" />
+		<Button x:id="mdhButton" text="neutral loss detector" />
+		<Button x:id="markerButton" text="marker ions off" />
+		<Button x:id="massesButton" text="masses off" />
+		<Text x:id="userDelta" x:style="BORDER" text="113.084060">
+				<layoutData x:class="gridData"  widthHint="50" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+	    </Text>
+		<Button x:id="userDeltaButton" text="off" />
+		
+		<label text="   "/>
+		<Button x:id="loadRecordButton" text="load:" />
+		<Combo x:id="loadCombo" x:style="DROP_DOWN|SINGLE|READ_ONLY"/>
+	    <Text x:id="loadRecordText" x:style="BORDER" text="0">
+				<layoutData x:class="gridData"  widthHint="50" grabExcessHorizontalSpace="false" horizontalAlignment="GridData.END"/>
+	    </Text>	
+	    <label text="   "/>
+		<progressBar x:id="progressBar" />
+		<label text="Welcome to differential PTM Detection" x:id="labelState" x:style="BORDER" >
+			<layoutData x:class="gridData" grabExcessHorizontalSpace="true"
+				horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL" />
+		</label>
+	</composite>
+</xswt>
+

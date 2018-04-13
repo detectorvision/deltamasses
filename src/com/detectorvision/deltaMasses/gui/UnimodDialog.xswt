@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+    </import>
+
+    <getShell text="UNIMOD Modifications" x:style="DIALOG_TRIM | APPLICATION_MODAL"/>
+    
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+    <label image="com.detectorvision.XSWTImageLoaderUtility images/unimod_logo.png" />
+    
+	<table x:style="BORDER | FULL_SELECTION" headerVisible="true" x:id="unimodTable">
+		<layoutData x:class="gridData" widthHint="760" heightHint="300"/>
+		<x:children>
+			<tableColumn width="120" text="Modification"/>
+			<tableColumn width="90" text="Delta Mass"/>
+			<tableColumn width="100" text="Composition"/>
+			<tableColumn width="120" text="Full Name"/>
+			<tableColumn width="75" text="Posted Date"/>
+			<tableColumn width="75" text="Modified Date"/>
+			<tableColumn width="75" text="UniMod ID"/>							
+			<tableColumn width="80" text="absolute mass difference"/>			
+			<!--<tableItem/>-->
+		</x:children>
+	</table>
+	<composite>
+	    <layout x:class="gridLayout" numColumns="2"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>        
+	    <Button x:id="unimodPdfButton" text="&amp;create pdf"><layoutData x:class="gridData" widthHint="80"/></Button>        
+		<Button x:id="cancelButton" text="&amp;Cancel"><layoutData x:class="gridData" widthHint="80"/></Button>
+	</composite>
+</xswt>

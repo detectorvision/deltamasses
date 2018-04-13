@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+		<package name="org.eclipse.jface.action" />
+		<package name="gui.diagrams" />
+           
+    </import> 
+	<getShell text="Help" x:style="MIN | ON_TOP" />
+	
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+          <label image="com.detectorvision.XSWTImageLoaderUtility images/about_image.png" />
+		 <Label x:id="Message" text=""/>
+    <composite>
+	    <layout x:class="gridLayout" numColumns="1"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.CENTER"/>        
+		<Button x:id="cancelButton" text="&amp;Cancel"><layoutData x:class="gridData" widthHint="80"/></Button>
+	</composite>
+    
+</xswt>
+

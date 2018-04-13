@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+		<package name="org.eclipse.jface.action" />
+		<package name="gui.diagrams" />
+          
+    </import>  
+	<getShell text="Upgrade to Discovery Edition" x:style="MIN | ON_TOP" />
+	
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />  
+    <label image="com.detectorvision.XSWTImageLoaderUtility images/pmc_image.png" />
+    <label x:id="licenseLabel0" text="Upgrade to Discovery Edition by following the steps below. 4100.- Euro"><layoutData x:class="gridData" widthHint="450"/></label>
+    <label text="quotation needed for a legally binding offer"><layoutData x:class="gridData" widthHint="450"/></label>
+    <label x:id="licenseLabel1" text=""><layoutData x:class="gridData" widthHint="450"/></label>
+    <label x:id="licenseLabel2" text=""><layoutData x:class="gridData" widthHint="450"/></label>
+    <label x:id="licenseLabel3" text=""><layoutData x:class="gridData" widthHint="450"/></label>
+    
+    <composite>
+	 <layout x:class="gridLayout" numColumns="2"/>
+     <Button x:id="macToClipBoardButton" text="&amp;copy to clipboard"><layoutData x:class="gridData" widthHint="100"/></Button>
+     <Button x:id="cancelButton" text="&amp;Cancel"><layoutData x:class="gridData" widthHint="100"/></Button>
+	</composite>
+</xswt>
+

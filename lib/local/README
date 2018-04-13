@@ -1,0 +1,26 @@
+$Id: README 168 2008-07-08 12:23:27Z jari $
+
+Placeholder for local/personalized library (jar) files
+------------------------------------------------------
+
+The distribution files are targeted for the Microsoft Windows
+operating system. Deltamasses is currently only distributed for use in
+Microsoft Windows environments. However, devlopment may be done in
+other operating environemnts and therefore operating system sepecific
+libraries should be placed in this directory but not added to revision
+control.
+
+Place local library files in this directory. The build target
+'local' will check for library files here, and use them instead
+of the ones found in '../dist'.
+
+Do NOT check-in you local library files! Library files for
+distribution should be placed in '../dist'.
+
+
+swt.jar is needed for non Microsoft environments.
+-------------------------------------------------
+
+Currently one file is operating system specific, swt.jar. Download,
+from http://www.eclipse.org/swt/, the swt package matching your
+operating system and place swt.jar here.

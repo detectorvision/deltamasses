@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<massspectrometry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="com/detectorvision/massspectrometry/datacontrol/fileloader.xsd">
+	<loader>
+		<name>com.detectorvision.massspectrometry.datacontrol.DefaultRecordLoader</name>
+		<extension>mgf</extension>
+	</loader>
+	<loader>
+		<name>com.detectorvision.massspectrometry.datacontrol.RandomRecordLoader</name>
+		<extension>random.params</extension>
+	</loader>
+	<loader>
+		<name>com.detectorvision.massspectrometry.datacontrol.MascotXMLRecordLoader</name>
+		<extension>xml</extension>
+	</loader>
+		<loader>
+		<name>com.detectorvision.massspectrometry.datacontrol.OmssaXMLRecordLoader</name>
+		<extension>omx</extension>
+	</loader>
+	
+</massspectrometry>

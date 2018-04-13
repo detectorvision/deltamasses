@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/> 
+        <package name="org.eclipse.swt.layout"/>
+        <package name="gui.diagrams" />
+    </import>
+    
+    <getShell text="About" x:style="NO_TRIM | ON_TOP" />
+    
+    <layout x:class="gridLayout" numColumns="1"/>   
+       
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+     <label x:id="versionLabel" text="version:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"><layoutData x:class="gridData" grabExcessHorizontalSpace="true" /></label>                
+    <label image="com.detectorvision.XSWTImageLoaderUtility images/about_image.png" />
+<composite>
+	    <layout x:class="gridLayout" numColumns="1"/>
+	    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+	            horizontalAlignment="GridData.END"/>        
+	    
+		<Button x:id="cancelButton" text="&amp;Cancel"><layoutData x:class="gridData" widthHint="80"/></Button>
+		
+	</composite>
+
+
+</xswt>

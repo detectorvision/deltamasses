@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+    </import>
+    
+    <getShell text="deltaMasses" x:style="NO_TRIM | ON_TOP" />
+    
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+            
+    <label image="com.detectorvision.XSWTImageLoaderUtility images/splash_image.png" />
+    <label x:id="textLabel" text="deltaMasses is preparing to load the data--------------------------" />
+ </xswt>

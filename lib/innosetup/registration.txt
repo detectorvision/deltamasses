@@ -1,0 +1,28 @@
+#############################################
+#deltaMasses registration file
+#please never touch this
+#(C) Detecorvision AG CH-Zurich 2006-2007
+#    www.detectorvision.com
+#############################################
+VERSION=2.2
+BUILD=build #81
+EDITION=personal
+MAC=
+#############################################
+VERSION_EXPIRE=2007 05 04
+#must be updated latest at above date
+#############################################
+LICENSE_KEY=YEIA-3ELO-EKDJ-PW42-JFK3-NYNY
+LICENSE_NUMBER=***
+USER_FIRST=
+USER_LAST=
+USER_EMAIL=
+USER_CITY=
+USER_COUNTRY=
+#############################################
+ICPL=ON
+CARBONCOUNTER=OFF
+QUADCORE=OFF
+IBM_DUAL_QUAD=OFF
+AUTOMATION=OFF
+#############################################

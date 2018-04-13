@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+		<package name="org.eclipse.jface.action" />
+		<package name="gui.diagrams" />
+          
+    </import>  
+	<getShell text="check for updates" x:style="MIN | ON_TOP" />
+	
+    <layout x:class="gridLayout" numColumns="1"/>
+    <layoutData x:class="gridData" grabExcessHorizontalSpace="true" 
+            grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" 
+            verticalAlignment="GridData.FILL" />
+     
+    <label image="com.detectorvision.XSWTImageLoaderUtility images/pmc_image.png" />
+    <label x:id="updateLabel" text="Trying to connect to www.detectorvision.com/deltaMasses/ "><layoutData x:class="gridData" widthHint="450"/></label>
+    <label x:id="updateLabel2" text=""><layoutData x:class="gridData" widthHint="450"/></label>
+    <label x:id="updateLabel3" text=""><layoutData x:class="gridData" widthHint="450"/></label>
+    
+    <Button x:id="cancelButton" text="&amp;Cancel"><layoutData x:class="gridData" widthHint="100"/></Button>
+</xswt>
+

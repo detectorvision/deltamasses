@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- $Id: build.xml 256 2009-01-05 10:22:16Z jari $ -->
+
+<project
+	name="deltaMasses"
+	default="all"
+	basedir=".">
+
+	<description>
+		Build file for deltaMasses.
+
+		Clean up:
+		clean:            Remove all generated files
+
+		Compiling code:
+		all:              Compile everything (default)
+		dev:              Build everyting for local testing/use ... uses
+		                  local configuration and library files.
+		deltamasses:      Compile com.detectorvision.deltamasses
+		dist:             Build everything for distribution
+		massspectrometry: Compile com.detectorvision.massspectrometry
+		utility:          Compile com.detectorvision.utility
+	</description>
+
+	<!-- Set version deltaMasses version
+		Use numerical versions for bugfix (maintenance) releases starting
+		with "1". Use "0" for the first release of a new trunk version. Add
+		"pre" to unreleased versions.
+		Examples: 2.1.1pre, 2.1.1, 2.1.2pre, 2.1.2, 2.2.0pre, 2.2.0, 2.2.1pre, 2.2.1
+	-->
+	<property name="deltamasses.majorversion" value="4" />
+	<property name="deltamasses.minorversion" value="2" />
+	<property name="deltamasses.patchversion" value="0pre" />
+
+	<property name="build" location="build"
+		description="Location of generated files" />
+	<property name="build.deltamasses" location="${build}/deltamasses"
+		description="Location of compiled files" />
+	<property name="build.images" location="${build}/images"
+		description="Location of image files" />
+	<property name="build.massspectrometry" location="${build}/massspectrometry"
+		description="Location of compiled files" />
+	<property name="build.utility" location="${build}/utility"
+		description="Location of compiled utility files" />
+
+	<property name="config" location="config"
+		description="Location of run-time configuration files" />
+
+	<property name="dist" location="dist"
+		description="Directory where distribution should be created" />
+
+	<property name="doc" location="doc"
+		description="Location of documentation files" />
+
+	<property name="lib" location="lib"
+		description="Location of 3rd-party JAR files" />
+
+	<property name="src" location="src"
+		description="Location of all source files" />
+	<property name="src.detectorvision" value="com/detectorvision"
+		description="Location of all source files" />
+	<property name="src.deltamasses" value="${src.detectorvision}/deltaMasses"
+		description="Location of deltaMasses source files" />
+	<property name="src.images" value="${src.detectorvision}/images"
+		description="Location of image source files" />
+	<property name="src.massspectrometry" value="${src.detectorvision}/massspectrometry"
+		description="Location of massspectrometry source files" />
+	<property name="src.utility" value="${src.detectorvision}/utility"
+		description="Location of utility source files" />
+
+	<property name="javac.arg" value="-Xlint:unchecked"
+		description="Extra arguments to Java compiler" />
+	<property name="javac.encoding" value="ISO-8859-1"
+		description="Default value for the 'encoding' attribute when compiling" />
+	<property name="javac.source" value="1.6"
+		description="Default value for the 'source' attribute when compiling" />
+	<property name="javac.target" value="1.6"
+		description="Default value for the 'target' attribute when compiling" />
+
+	<!-- classpaths to library files -->
+
+	<path id="lib.dist.classpath">
+		<fileset dir="${lib}/dist">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+	<!-- classpaths to generated jar files -->
+
+	<path id="build.classpath">
+		<fileset dir="${build}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<!-- task definitions -->
+
+	<target
+		name="all"
+		depends="dist"
+		description="Build everyting" >
+	</target>
+
+	<target
+		name="clean"
+		description="Remove all generated files" >
+		<delete failonerror="false" includeemptydirs="true">
+			<fileset dir="${build}" />
+			<fileset dir="${dist}" />
+		</delete>
+	</target>
+
+	<target
+		name="config.dist.copy"
+		>
+		<copy todir="${dist}/config" description="Default configuration files">
+			<fileset dir="${config}/dist">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target
+		name="config.local.copy"
+		>
+		<copy todir="${dist}/config" overwrite="yes"
+					description="Local/personalized configuration files">
+			<fileset dir="${config}/local">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target
+		name="deltamasses"
+		depends="massspectrometry.jar,utility.jar"
+		description="Build deltamasses" >
+		<mkdir dir="${build.deltamasses}" />
+		<path id="deltamasses.classpath">
+			<path refid="build.classpath" />
+			<path refid="lib.dist.classpath" />
+		</path>
+		<javac
+			classpathref="deltamasses.classpath"
+			debug="true"
+			deprecation="true"
+			destdir="${build.deltamasses}"
+			encoding="${javac.encoding}"
+			source="${javac.source}"
+			srcdir="${src}"
+			includes="${src.deltamasses}/**/*.java"
+			target="${javac.target}"
+			>
+			<compilerarg value="${javac.arg}" />
+		</javac>
+	</target>
+
+	<target
+		name="deltamasses.jar"
+		depends="deltamasses"
+		description="Create the deltamasses.jar file"
+		>
+		<copy todir="${build.deltamasses}" description="xswt files">
+			<fileset dir="src">
+				<include name="**/deltaMasses/**/*.xswt" />
+			</fileset>
+		</copy>
+		<jar
+			basedir="${build.deltamasses}"
+			jarfile="${build}/deltamasses.jar"
+		/>
+	</target>
+
+	<!-- 'depends' order important here -->
+	<target
+		name="dev"
+		depends="dist,config.local.copy,jarlib.local.copy"
+		description="Create a developer version of the deltaMasses distribution" >
+	</target>
+
+	<target
+		name="dist"
+		depends="deltamasses.jar,images.jar,massspectrometry.jar,utility.jar,
+						 config.dist.copy,doc.copy,jarlib.dist.copy"
+		description="Create a deltaMasses distribution" >
+		<copy todir="${dist}/lib" description="Created JAR files">
+			<fileset dir="${build}">
+				<include name="**/*.jar" />
+			</fileset>
+		</copy>
+		<mkdir dir="${dist}/log" />
+		<mkdir dir="${dist}/tmp" />
+	</target>
+
+	<target
+		name="doc.copy"
+		>
+		<copy todir="${dist}/documentation" description="Documentation files">
+			<fileset dir="${doc}/dist">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target
+		name="images.jar"
+		description="Create the images.jar file"
+		>
+		<copy todir="${build.images}" description="Copy images files">
+			<fileset dir="src">
+				<include name="**/images/*.png" />
+			</fileset>
+		</copy>
+		<jar
+			basedir="${build.images}"
+			jarfile="${build}/images.jar"
+		/>
+	</target>
+
+	<target
+		name="jarlib.dist.copy"
+		>
+		<copy todir="${dist}/lib" description="3rd-party JAR files">
+			<fileset dir="${lib}/dist">
+				<include name="**/*.jar" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target
+		name="jarlib.local.copy"
+		>
+		<copy todir="${dist}/lib" overwrite="yes"
+					description="Local/personalized library files">
+			<fileset dir="${lib}/local">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target
+		name="massspectrometry"
+		depends="utility.jar"
+		description="Build massspectrometry" >
+		<mkdir dir="${build.massspectrometry}" />
+		<path id="massspectrometry.classpath">
+			<path refid="build.classpath" />
+			<path refid="lib.dist.classpath" />
+		</path>
+		<javac
+			classpathref="massspectrometry.classpath"
+			debug="true"
+			deprecation="true"
+			destdir="${build.massspectrometry}"
+			encoding="${javac.encoding}"
+			source="${javac.source}"
+			srcdir="${src}"
+			includes="${src.massspectrometry}/**/*.java"
+			target="${javac.target}"
+			>
+			<compilerarg value="${javac.arg}" />
+		</javac>
+	</target>
+
+	<target
+		name="massspectrometry.jar"
+		depends="massspectrometry"
+		description="Create the massspectrometry.jar file"
+		>
+		<copy todir="${build.massspectrometry}" description="xswt files">
+			<fileset dir="src">
+				<include name="**/massspectrometry/**/*.xml" />
+				<include name="**/massspectrometry/**/*.xsd" />
+			</fileset>
+		</copy>
+		<jar
+			basedir="${build.massspectrometry}"
+			jarfile="${build}/massspectrometry.jar"
+		/>
+	</target>
+
+	<target
+		name="utility"
+		description="Build utility" >
+		<mkdir dir="${build.utility}" />
+		<javac
+			classpathref="lib.dist.classpath"
+			debug="true"
+			deprecation="true"
+			destdir="${build.utility}"
+			encoding="${javac.encoding}"
+			source="${javac.source}"
+			srcdir="${src}"
+			includes="${src.utility}/**/*.java ${src.detectorvision}/XSWTImageLoaderUtility.java"
+			target="${javac.target}"
+			>
+			<compilerarg value="${javac.arg}" />
+		</javac>
+	</target>
+
+	<target
+		name="utility.jar"
+		depends="utility"
+		description="Create the utility.jar file"
+		>
+		<jar
+			basedir="${build.utility}"
+			jarfile="${build}/utility.jar"
+		/>
+	</target>
+
+</project>
