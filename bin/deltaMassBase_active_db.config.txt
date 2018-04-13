@@ -1,6 +1,6 @@
 #################################################################################
 #
-# (C)2005-2008 Detectorvision AG Zurich
+# (C)2005-2018 Detectorvision AG Zurich
 # www.detectorvision.com
 #
 # This software is protected by international copyright treaties.
