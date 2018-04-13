@@ -1,4 +1,6 @@
-#deltaMasses open source code repository
+# Protein Modification Discovery
+
+## deltaMasses open source repository
 
 deltaMasses has been opensourced in april 2018.
 
