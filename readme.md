@@ -9,7 +9,9 @@ This will follow soon.
 
 ## Java developers with Git and Eclipse experience:
 
-Clone the deltamasses repository  on a windows machine
+Clone the deltamasses repository  on a windows machine :
+
+git clone https://github.com/detectorvision/deltamasses
 
 Install Eclipse Oxygen IDE for Java Developers 32 bit ( not 64 bit due to xswt libraries )
 
