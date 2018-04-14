@@ -4,6 +4,8 @@
 
 deltaMasses has been opensourced in april 2018.
 
+It is programmed in Java using XSWT and the free https://www.postgresql.org database.
+
 Right now, there is no official download for end-users. 
 This will follow soon. 
 
@@ -21,7 +23,7 @@ Install Eclipse Oxygen IDE for Java Developers 32 bit ( not 64 bit due to xswt l
 In Eclipse, import deltaMasses as follows:
 Import->General->Projets from Folder or Archive->choose the deltamasses folder
 
-Install postgresql for database support.
+Install https://www.postgresql.org for database support.
 
 Start detlaMasses from 
 /deltamasses/src/com/detectorvision/deltaMasses/DeltaMasses.java
