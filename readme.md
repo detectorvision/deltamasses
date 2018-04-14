@@ -21,6 +21,7 @@ git clone https://github.com/detectorvision/deltamasses
 Install Eclipse Oxygen IDE for Java Developers 32 bit ( not 64 bit due to xswt libraries )
 
 In Eclipse, import deltaMasses as follows:
+
 Import->General->Projets from Folder or Archive->choose the deltamasses folder
 
 Install https://www.postgresql.org for database support.
